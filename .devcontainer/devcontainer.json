@@ -1,0 +1,8 @@
+{
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3",
+    "remoteUser": "root",
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
+    ],
+    "postCreateCommand": "apt-get update && apt-get install -y python3-sphinx && pip3 install --user -r requirements.txt"
+}
